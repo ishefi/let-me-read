@@ -1,0 +1,26 @@
+{
+  "name": "Let Me Read HaAretz",
+  "version": "1.0",
+    "permissions": ["activeTab", "declarativeContent", "storage"],
+  "description": "This extension lets you read HaAretz without any blocks",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+    },
+   "page_action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "images/bonobo16.png",
+        "32": "images/bonobo32.png",
+        "48": "images/bonobo48.png",
+        "128": "images/bonobo128.png"
+      }
+    },
+    "icons": {
+      "16": "images/bonobo16.png",
+      "32": "images/bonobo32.png",
+      "48": "images/bonobo48.png",
+      "128": "images/bonobo128.png"
+    },
+      "manifest_version": 2
+}
