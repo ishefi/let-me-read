@@ -1,6 +1,12 @@
 {
   "name": "Let Me Read HaAretz",
-  "version": "1.0",
+  "version": "0.0.0.1",
+  "content_scripts": [
+    {
+      "matches": ["https://www.haaretz.co.il/*"],
+      "js": ["content.js"]
+    }
+  ],
     "permissions": ["activeTab", "declarativeContent", "storage"],
   "description": "This extension lets you read HaAretz without any blocks",
   "background": {
