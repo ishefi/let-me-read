@@ -1,17 +1,20 @@
 {
-  "name": "Let Me Read HaAretz",
-  "version": "0.0.0.1",
+  "name": "Let Me Read Haaretz",
+  "short_name": "LetMeRead",
+  "version": "0.0.0.2",
   "content_scripts": [
     {
-      "matches": ["https://www.haaretz.co.il/*"],
+      "matches": ["https://www.haaretz.co.il/*",
+                  "https://www.haaretz.com/*",
+                  "https://www.themarker.com/*"],
       "js": ["content.js"]
     }
   ],
-    "permissions": ["activeTab", "declarativeContent", "storage"],
-  "description": "This extension lets you read HaAretz without any blocks",
+    "permissions": ["activeTab", "declarativeContent", "storage", "webRequest", "webRequestBlocking", "https://www.haaretz.co.il/*", "https://www.haaretz.com/*", "https://www.themarker.com/*"],
+  "description": "This extension allows you read full articles from www.haaretz.co.il, www.haaretz.com, www.themarker.co.il without any pay banners. Works also in incognito",
   "background": {
     "scripts": ["background.js"],
-    "persistent": false
+    "persistent": true
     },
    "page_action": {
       "default_popup": "popup.html",
@@ -19,14 +22,14 @@
         "16": "images/bonobo16.png",
         "32": "images/bonobo32.png",
         "48": "images/bonobo48.png",
-        "128": "images/bonobo128.png"
+        "128": "images/bonobo_icon.png"
       }
     },
     "icons": {
       "16": "images/bonobo16.png",
       "32": "images/bonobo32.png",
       "48": "images/bonobo48.png",
-      "128": "images/bonobo128.png"
+      "128": "images/bonobo_icon.png"
     },
       "manifest_version": 2
 }

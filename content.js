@@ -1,15 +1,19 @@
 console.log('in content')
-var elem = document.querySelector('body > div.paywall-pop-small.js-modal.modal-wrapper.modal-wrapper--fixed');
-if (elem != undefined){
-	console.log('found paywall banner') 
-	elem.parentNode.removeChild(elem);
+
+var banners = ['body > div.paywall-pop-small.js-modal.modal-wrapper.modal-wrapper--fixed',
+               '#private-mode-wrapper']
+
+var do_scrollbar = false;
+for (var i = 0; i < banners.length; i++){
+    var banner = document.querySelector(banners[i]);
+    if (banner != undefined){
+        console.log('removing ' + banners[i]);
+        banner.parentNode.removeChild(banner);
+        do_scrollbar = true;
+    }
 }
-var elem2 = document.querySelector('#private-mode-wrapper');
-if (elem2 != undefined){
-	console.log('found private banner')
-	elem2.parentNode.removeChild(elem2);
-}
-if (elem2!= undefined || elem!=undefined){
-	console.log('adding scroll bar')
-	document.querySelector('html').style.overflowY = 'auto';	
+
+if (do_scrollbar){
+    console.log('adding scroll bar')
+    document.querySelector('html').style.overflowY = 'auto';
 }
