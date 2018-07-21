@@ -11,7 +11,7 @@
     }
   ],
     "permissions": ["activeTab", "declarativeContent", "storage", "webRequest", "webRequestBlocking", "https://www.haaretz.co.il/*", "https://www.haaretz.com/*", "https://www.themarker.com/*"],
-  "description": "This extension allows you read full articles from www.haaretz.co.il, www.haaretz.com, www.themarker.co.il without any pay banners. Works also in incognito",
+  "description": "Allows you to read full articles from haaretz.co.il, haaretz.com, themarker.co.il without any pay banners. Works also in incognito",
   "background": {
     "scripts": ["background.js"],
     "persistent": true
