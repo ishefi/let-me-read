@@ -1,12 +1,12 @@
 {
   "name": "Let Me Read Haaretz",
   "short_name": "LetMeRead",
-  "version": "0.0.0.2",
+  "version": "0.0.0.3",
   "content_scripts": [
     {
       "matches": ["https://www.haaretz.co.il/*",
                   "https://www.haaretz.com/*",
-                  "https://www.themarker.com/*",
+                  "https://www.themarker.com/*"
                 ],
       "js": ["content.js"]
     }
