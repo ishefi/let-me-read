@@ -12,6 +12,9 @@ chrome.runtime.onInstalled.addListener(function() {
        }),
         new chrome.declarativeContent.PageStateMatcher({
           pageUrl: {hostEquals: 'www.themarker.co.il'},
+       }),
+        new chrome.declarativeContent.PageStateMatcher({
+          pageUrl: {hostEquals: 'www.quora.com'},
        })
         ],
         actions: [new chrome.declarativeContent.ShowPageAction()]
@@ -30,6 +33,6 @@ chrome.webRequest.onBeforeSendHeaders.addListener(
         }
         return {requestHeaders: details.requestHeaders};
     },
-    {urls: ["https://www.haaretz.co.il/*", "https://www.haaretz.com/*", "https://www.themarker.com/*"]},
+    {urls: ["https://www.haaretz.co.il/*", "https://www.haaretz.com/*", "https://www.themarker.com/*", "https://www.quora.com/*"]},
     ['blocking', 'requestHeaders']
     );
