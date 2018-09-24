@@ -1,7 +1,7 @@
 console.log('in content')
 
 var banners = ['body > div.paywall-pop-small.js-modal.modal-wrapper.modal-wrapper--fixed',
-               '#private-mode-wrapper']
+               '#private-mode-wrapper', '#botspopup_wrapper']
 
 var do_scrollbar = false;
 for (var i = 0; i < banners.length; i++){
