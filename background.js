@@ -23,6 +23,15 @@ chrome.runtime.onInstalled.addListener(function() {
   });
 
 
+chrome.webRequest.onBeforeRequest.addListener(
+  function() { return {cancel: true}; },
+  {
+    urls: ["https://www.haaretz.co.il/htz/js/inter.js", "https://www.themarker.com/st/c/static/heb/inter.js"],
+    types: ["script"]
+  },
+  ["blocking"]
+);
+
 chrome.webRequest.onBeforeSendHeaders.addListener(
     function(details) {
         for (var i = 0; i < details.requestHeaders.length; ++i) {
