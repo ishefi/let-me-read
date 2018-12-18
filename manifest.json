@@ -1,7 +1,7 @@
 {
   "name": "Let Me Read Haaretz",
   "short_name": "LetMeRead",
-  "version": "0.0.0.5",
+  "version": "0.0.0.6",
   "content_scripts": [
     {
       "matches": ["https://www.haaretz.co.il/*",
