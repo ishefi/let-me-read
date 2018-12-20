@@ -18,7 +18,8 @@ if (do_scrollbar){
 }
 else {
     console.log('doing extreme stuff')
-    if (!document.location.href.includes('172')){
-         window.location.replace(document.location.href + '?172')
+    var loc = document.location.href;
+    if (!loc.includes('172') && !loc.includes('MAGAZINE')){
+         window.location.replace(loc + '?172')
     }
 }
