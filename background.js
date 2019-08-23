@@ -5,30 +5,30 @@ window.browser = (function () {
 })();
 
 
-browser.runtime.onInstalled.addListener(function() {
-    var isChrome = !!window.chrome && !!window.chrome.webstore;
-    if (isChrome){
-      chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
-        chrome.declarativeContent.onPageChanged.addRules([{
-          conditions: [
-          new chrome.declarativeContent.PageStateMatcher({
-            pageUrl: {hostEquals: 'www.haaretz.co.il'},
-         }),
-          new chrome.declarativeContent.PageStateMatcher({
-            pageUrl: {hostEquals: 'www.haaretz.com'},
-         }),
-          new chrome.declarativeContent.PageStateMatcher({
-            pageUrl: {hostEquals: 'www.themarker.co.il'},
-         }),
-          new chrome.declarativeContent.PageStateMatcher({
-            pageUrl: {hostEquals: 'www.quora.com'},
-         })
-          ],
-          actions: [new chrome.declarativeContent.ShowPageAction()]
-        }]);
-      });
-    }
-  });
+// browser.runtime.onInstalled.addListener(function() {
+//     var isChrome = !!window.chrome && !!window.chrome.webstore;
+//     if (isChrome){
+//       chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
+//         chrome.declarativeContent.onPageChanged.addRules([{
+//           conditions: [
+//           new chrome.declarativeContent.PageStateMatcher({
+//             pageUrl: {hostEquals: 'www.haaretz.co.il'},
+//          }),
+//           new chrome.declarativeContent.PageStateMatcher({
+//             pageUrl: {hostEquals: 'www.haaretz.com'},
+//          }),
+//           new chrome.declarativeContent.PageStateMatcher({
+//             pageUrl: {hostEquals: 'www.themarker.co.il'},
+//          }),
+//           new chrome.declarativeContent.PageStateMatcher({
+//             pageUrl: {hostEquals: 'www.quora.com'},
+//          })
+//           ],
+//           actions: [new chrome.declarativeContent.ShowPageAction()]
+//         }]);
+//       });
+//     }
+//   });
 
 browser.webRequest.onBeforeRequest.addListener(
   function() { return {cancel: true}; },
