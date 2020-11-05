@@ -1,5 +1,5 @@
 # let-me-read
-a Chrome extension for removing Haaretz "members only" limitation. currently in dev mode.
+an extension for removing Haaretz "members only" limitation. currently in dev mode.
 
 #installation:
 * clone the repo
